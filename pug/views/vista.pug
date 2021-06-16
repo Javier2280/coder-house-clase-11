@@ -1,0 +1,26 @@
+extend index
+
+block vista
+    body 
+        div(class=".container.mt-3") 
+            div(class=".jumbotron") 
+                h1(style='color:blue')!="Ingrese un producto"
+                br
+                form(action='/api/productos/guardar' method='post')
+                    label(for="title") 
+                    b!='Titulo' 
+                    input(class='title.form-control' type='text' name='title')
+
+                    label(for="price") 
+                    b!='Precio'
+                    input(class='price.form-control' type='text' name='price')
+
+                    label(for="thumbnail") 
+                    b!='Miniatura' 
+                    input(class='thumbnail.form-control' type='text' name='thumbnail')
+
+                    button(class=".btn.btn-success.mt-3mb-5")!='Guardar'
+            
+            h2(style='color:crimson;')!='Historial'
+
+block lista

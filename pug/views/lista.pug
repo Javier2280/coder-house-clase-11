@@ -1,0 +1,18 @@
+block lista
+    if hayProductos
+    .table-responsive
+        table(class='table.table-dark')
+            tr(style='color: yello')
+                tn Titulo
+                tn Precio
+                tn Thumbnail
+            tr 
+                each productos
+                tr
+                td = productos.title
+
+                td = productos.price
+
+                td = productos.thumbnail
+    else
+        h3(class='alert alert-danger')!='No se encontraron datos'
