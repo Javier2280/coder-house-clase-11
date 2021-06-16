@@ -1,0 +1,16 @@
+{
+  "name": "desafio-11-motores-plantillas-ejs",
+  "version": "1.0.0",
+  "description": "Desafío entregable 11 (ejs) para el curso de desarrollador backend.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Javier Cabaña",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
+}
