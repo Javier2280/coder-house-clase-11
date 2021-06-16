@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+</head>
+
+<body class="container">
+
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+
+    <main>
+        <div class="jumbotron">
+            <%- include('../partials/guardar'); %>
+            <br>
+            <table class="table table-dark">
+                <% if(hayProductos){ %>
+                    <tr><th>Nombre</th><th>Precio</th><th>Foto</th></tr>
+                    <% productos.forEach(function(productos) { %>
+                        <tr><td> <%= productos.title %> </td><td>$ <%= productos.price %> </td><td><img width="50" src=<%=productos.thumbnail %> alt="not found"></td></tr>
+                    <% }); %>
+                <% } else{ %>
+                    <h3 class="alert alert-warning">No se encontraron productos</h3>
+                <% } %>
+        </div>
+    </main>
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+
+</body>
+
+</html>
